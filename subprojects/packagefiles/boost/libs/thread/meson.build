@@ -22,7 +22,7 @@ endif
 boost_thread = library('boost_thread', thread_sources,
                        include_directories: inc,
                        cpp_args: thread_args,
-                       dependencies: [thread_dep, boost_chrono_dep])
+                       dependencies: [thread_dep, boost_chrono_dep, boost_system_dep])
 
 boost_thread_dep = declare_dependency(link_with: boost_thread, include_directories: inc,
                                       compile_args: [is_static ? '-DBOOST_THREAD_BUILD_LIB=1'

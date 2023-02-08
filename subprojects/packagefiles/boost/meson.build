@@ -1,5 +1,5 @@
 project('boost', 'cpp',
-  version: '1.74.0',
+  version: '1.68.0',
   meson_version: '>=0.55.0')
 
 cpp = meson.get_compiler('cpp')
@@ -20,7 +20,7 @@ endif
 icu_deps = [dependency('icu-uc'),
             dependency('icu-i18n')]
 
-modules = ['chrono', 'thread', 'filesystem', 'locale', 'regex', 'program_options']
+modules = ['chrono', 'system', 'thread', 'filesystem', 'locale', 'regex', 'program_options']
 foreach module: modules
     subdir('libs/' + module)
 endforeach

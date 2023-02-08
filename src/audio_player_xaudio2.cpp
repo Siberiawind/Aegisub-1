@@ -36,6 +36,8 @@
 #include <libaegisub/scoped_ptr.h>
 #include <libaegisub/log.h>
 #include <libaegisub/make_unique.h>
+#include <crtdefs.h>
+#include <process.h>
 
 #ifndef XAUDIO2_REDIST
 #include <xaudio2.h>

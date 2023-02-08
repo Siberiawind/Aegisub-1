@@ -75,7 +75,7 @@ locale_args += '-DBOOST_LOCALE_WITH_ICU=1'
 boost_locale = library('boost_locale', locale_sources,
                        include_directories: inc,
                        cpp_args: locale_args,
-                       dependencies: [thread_dep, locale_deps, boost_thread_dep])
+                       dependencies: [thread_dep, locale_deps, boost_thread_dep, system_dep])
 
 boost_locale_dep = declare_dependency(link_with: boost_locale, include_directories: inc,
                                       compile_args: '-DBOOST_ALL_NO_LIB=1')
